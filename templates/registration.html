@@ -1,0 +1,53 @@
+    {% extends 'dummy.html' %}
+
+    {% block title %}
+        <title>Registration page</title>
+        <style>
+            body{
+                background-image: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=pexels-pixabay-36717.jpg&fm=jpg);
+            }
+            h1{
+                color: chartreuse;
+            }
+            input{
+                transition: 1s;
+                border-radius: 50px;
+                padding: 5px 50px 5px 30px;
+            }
+            
+            input:hover{
+                background-color: rgb(207, 243, 4);
+                color: rgb(245, 5, 5);
+                border-radius: 50px;
+            }
+            form{
+                color: rgb(9, 225, 13);
+                width: fit-content;
+                padding: 30px;
+                box-shadow: -20px 20px 30px rgb(246, 236, 236);
+                border-radius: 20px;
+                transition: 1s;
+                border: 2px solid red;
+            }
+            form:hover{
+                transform: translate(-20px,20px);
+                box-shadow: 40px 20px 30px black;
+            }
+        </style>
+    
+    {% endblock %}
+    
+    {% block body_block %}
+    <center>
+        <h1>Registration Form</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{usfo}}
+                {{pfo}}
+            </table><br><br>
+
+            <input type="submit" value="Registration ">
+        </form>
+    </center>
+    {% endblock %}

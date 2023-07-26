@@ -1,0 +1,29 @@
+{% extends 'dummy.html' %}
+    {% block title %}
+    <title>display_details</title>
+    {% endblock %}
+
+    {% block body_block %}
+    <center>
+        <table>
+            <h1>Display Details</h1><br>
+            <tr>
+                <td><strong>username :</strong></td>
+                <td>{{UO.username}}</td>
+            </tr>
+            <tr>
+                <td><strong>Email :</strong></td>
+                <td>{{UO.email}}</td>
+            </tr>
+            <tr>
+                <td><strong>Address :</strong></td>
+                <td>{{PO.address}}</td>
+            </tr>
+            <tr>
+                <td><strong>Profile Picture :</strong></td>
+                <td><img src="{{ PO.profile_pic.url }}" alt="no image" width="300px"></td>
+            </tr>
+        </table>
+    </center>
+    {% endblock %}
+
